@@ -31,16 +31,18 @@
         <div id="header-form" class="contacts__form">
           <form action="" method="post" id="feedback-header" class="feedback">
             <p class="feedback__field">
-              <label class="feedback__field-title visually-hidden">
+              <label for="header-user" for="header-user" class="feedback__field-title visually-hidden">
                 Введите ваше имя
               </label>
-              <input type="text" class="feedback__field-input feedback__field-input--user" name="user" placeholder="Ваше имя" required>
+              <input type="text" id="header-user" class="feedback__field-input feedback__field-input--user" name="user" placeholder="Ваше имя"
+                required>
             </p>
             <p class="feedback__field">
-              <label class="feedback__field-title visually-hidden">
+              <label for="header-phone" class="feedback__field-title visually-hidden">
                 Введите Ваш номер телефона
               </label>
-              <input type="tel" class="feedback__field-input feedback__field-input--phone" name="phone" placeholder="Номер телефона" required>
+              <input type="tel" id="header-phone" class="feedback__field-input feedback__field-input--phone" name="phone" placeholder="Номер телефона"
+                required>
             </p>
             <p class="feedback__field">
               <button if="feedback-header-submit" type="submit" class="feedback__submit  btn">Перезвоните мне</button>
@@ -55,7 +57,7 @@
   </header>
 
   <main class="content">
-    <section class="sale container">
+    <section id="sale" class="sale container">
       <h1 class="sale__title">
         Срочный выкуп
         <span>авто</span> по всей РБ
@@ -65,12 +67,12 @@
       <div class="sale__form">
         <h3 class="sale__form-title">Выберите параметры своего автомобиля</h3>
 
-        <form action="" method="" id="sale-form" class="sale-form">
+        <form action="" method="" id="top-sale-form" class="sale-form">
           <p class="sale-form__field">
-            <label class="sale-form__field-title visually-hidden">
+            <label for="top-year" class="sale-form__field-title visually-hidden">
               Выберите год выпуска автомобиля
             </label>
-            <select name="year" class="sale-form__field-select" required>
+            <select name="year" id="top-year" class="sale-form__field-select" required>
               <option value="">Год выпуска</option>
               <option value="2018">2018</option>
               <option value="2017">2017</option>
@@ -81,10 +83,10 @@
             </select>
           </p>
           <p class="sale-form__field">
-            <label class="sale-form__field-title visually-hidden">
+            <label for="top-brand" class="sale-form__field-title visually-hidden">
               Выберите марку автомобиля
             </label>
-            <select name="brand" class="sale-form__field-select" required>
+            <select name="brand" id="top-brand" class="sale-form__field-select" required>
               <option value="">Марка авто</option>
               <option value="brand1">brand1</option>
               <option value="brand2">brand2</option>
@@ -95,10 +97,10 @@
             </select>
           </p>
           <p class="sale-form__field">
-            <label class="sale-form__field-title visually-hidden">
+            <label for="top-model" class="sale-form__field-title visually-hidden">
               Выберите модель автомобиля
             </label>
-            <select name="model" class="sale-form__field-select" required>
+            <select name="model" id="top-model" class="sale-form__field-select" required>
               <option value="">Модель</option>
               <option value="model1">model1</option>
               <option value="model2">model2</option>
@@ -115,7 +117,7 @@
       </div>
     </section>
 
-    <section class="work">
+    <section id="work" class="work">
       <div class="container">
         <h2 class="work__title section-title">как это работает</h2>
         <h3 class="work__sub-title">Всё просто, как раз два три</h3>
@@ -128,7 +130,7 @@
       </div>
     </section>
 
-    <section class="bonus container">
+    <section id="work" class="bonus container">
       <h2 class="bonus__title section-title">бонусы нашим клиентам</h2>
 
       <ul class="bonus__list">
@@ -168,7 +170,7 @@
       </ul>
     </section>
 
-    <section class="review">
+    <section id="review" class="review">
       <div class="container">
         <h2 class="review__title section-title">О нас говорят</h2>
         <div class="review__slider slider">
@@ -263,7 +265,7 @@
 
     </section>
 
-    <section class="features container">
+    <section id="features" class="features container">
       <h2 class="features__title section-title">Почему мы?</h2>
 
       <ul class="features__list">
@@ -282,25 +284,24 @@
           </p>
         </li>
         <li class="features__item feature feature--safely">
-          <h3 class="feature__title">Безопасно</h3>
+          <h3 class="feature__title">Официально</h3>
           <p class="feature__text">
-            Обратившись к нам, Вы получите максимально выгодные условия выкупа автомобиля, в 90% случаях мы предлагаем больше чем все
-            наши конкуренты
+            Мы работаем официально. Безопасность и юридическая чистота сделки для наших клиентов гарантирована
           </p>
         </li>
       </ul>
     </section>
 
-    <section class="assess">
+    <section id="assess" class="assess">
       <h2 class="assess__title section-title">Оценить ваш авто?</h2>
       <h3 class="assess__sub-title">Быстро, без лишней траты времени и денег</h3>
 
-      <form action="" method="" class="sale-form">
+      <form action="" method="" id="bottom-sale-form" class="sale-form">
         <p class="sale-form__field">
-          <label class="sale-form__field-title visually-hidden">
+          <label for="bottom-year" class="sale-form__field-title visually-hidden">
             Выберите год выпуска автомобиля
           </label>
-          <select name="year" class="sale-form__field-select" required>
+          <select name="year" id="bottom-year" class="sale-form__field-select" required>
             <option value="">Год выпуска</option>
             <option value="2018">2018</option>
             <option value="2017">2017</option>
@@ -311,10 +312,10 @@
           </select>
         </p>
         <p class="sale-form__field">
-          <label class="sale-form__field-title visually-hidden">
+          <label for="bottom-brand" class="sale-form__field-title visually-hidden">
             Выберите марку автомобиля
           </label>
-          <select name="brand" class="sale-form__field-select" required>
+          <select name="brand" id="bottom-brand" class="sale-form__field-select" required>
             <option value="">Марка авто</option>
             <option value="brand1">brand1</option>
             <option value="brand2">brand2</option>
@@ -325,10 +326,10 @@
           </select>
         </p>
         <p class="sale-form__field">
-          <label class="sale-form__field-title visually-hidden">
+          <label for="bottom-model" class="sale-form__field-title visually-hidden">
             Выберите модель автомобиля
           </label>
-          <select name="model" class="sale-form__field-select" required>
+          <select name="model" id="bottom-model" class="sale-form__field-select" required>
             <option value="">Модель</option>
             <option value="model1">model1</option>
             <option value="model2">model2</option>
@@ -368,16 +369,16 @@
           <div id="footer-form" class="contacts__form">
             <form action="" method="" id="feedback-footer" class="feedback">
               <p class="feedback__field">
-                <label class="feedback__field-title visually-hidden">
+                <label for="footer-user" class="feedback__field-title visually-hidden">
                   Введите Ваше имя
                 </label>
-                <input type="text" class="feedback__field-input" name="user" placeholder="Ваше имя" required>
+                <input type="text" id="footer-user" class="feedback__field-input" name="user" placeholder="Ваше имя" required>
               </p>
               <p class="feedback__field">
-                <label class="feedback__field-title visually-hidden">
+                <label for="footer-phone" class="feedback__field-title visually-hidden">
                   Введите Ваш номер телефона
                 </label>
-                <input type="tel" class="feedback__field-input" name="phone" placeholder="Номер телефона" required>
+                <input type="tel" id="footer-phone" class="feedback__field-input" name="phone" placeholder="Номер телефона" required>
               </p>
               <p class="feedback__field">
                 <button type="submit" class="feedback__submit btn">Перезвоните мне</button>
@@ -390,7 +391,7 @@
 
   </footer>
 
-  <section class="modal modal-feedback container">
+  <section id="modal-feedback" class="modal modal-feedback container">
     <div class="modal-feedback__line">
       <div class="main-header__logo logo">
         <a href="index.html" class="logo__link">
@@ -405,50 +406,50 @@
     </h2>
   </section>
 
-  <section class="modal modal-sale container">
+  <section id="modal-sale" class="modal modal-sale container">
     <div class="sale__form">
       <h3 class="sale__form-title">Выберите и введите оставшиеся данные</h3>
 
-      <form action="" method="" id="sale-form-modal" class="sale-form sale-form-modal">
+      <form action="" method="" id="modal-sale-form" class="sale-form modal-sale-form">
         <p class="sale-form__field">
-          <label class="sale-form__field-title visually-hidden">
+          <label for="series" class="sale-form__field-title visually-hidden">
             Введите серию автомобиля
           </label>
-          <select name="series" class="sale-form__field-select" required>
+          <select name="series" id="series" class="sale-form__field-select" required>
             <option value="">Серия авто</option>
-            <option value="brand1">brand1</option>
-            <option value="brand2">brand2</option>
-            <option value="brand3">brand3</option>
-            <option value="brand4">brand4</option>
-            <option value="brand5">brand5</option>
-            <option value="brand6">brand6</option>
+            <option value="series1">series1</option>
+            <option value="series2">series2</option>
+            <option value="series3">series3</option>
+            <option value="series4">series4</option>
+            <option value="series5">series5</option>
+            <option value="series6">series6</option>
           </select>
         </p>
         <p class="sale-form__field">
-          <label class="sale-form__field-title visually-hidden">
+          <label for="modification" class="sale-form__field-title visually-hidden">
             Введите модификацию автомобиля
           </label>
-          <select name="modification" class="sale-form__field-select" required>
+          <select name="modification" id="modification" class="sale-form__field-select" required>
             <option value="">Модификация</option>
-            <option value="model1">model1</option>
-            <option value="model2">model2</option>
-            <option value="model3">model3</option>
-            <option value="model4">model4</option>
-            <option value="model5">model5</option>
-            <option value="model6">model6</option>
+            <option value="modification1">modification1</option>
+            <option value="modification2">modification2</option>
+            <option value="modification3">modification3</option>
+            <option value="modification4">modification4</option>
+            <option value="modification5">modification5</option>
+            <option value="modification6">modification6</option>
           </select>
         </p>
         <p class="sale-form__field">
-          <label class="sale-form__field-title visually-hidden">
+          <label for="price" class="sale-form__field-title visually-hidden">
             Введите минимальную цену
           </label>
-          <input type="text" name="price" class="sale-form__field-input" placeholder="Min цена" required>
+          <input type="text" name="price" id="price" class="sale-form__field-input" placeholder="Min цена" required>
         </p>
         <p class="sale-form__field">
-          <label class="sale-form__field-title visually-hidden">
+          <label for="phone-number" class="sale-form__field-title visually-hidden">
             Введите Ваш номертелефона
           </label>
-          <input type="text" name="phone" class="sale-form__field-input" placeholder="Номер телефона" required>
+          <input type="text" name="phone-number" id="phone-number" class="sale-form__field-input" placeholder="Номер телефона" required>
         </p>
         <p class="sale-form__field">
           <button type="submit" class="sale-form__submit btn">Отправить</button>
@@ -457,23 +458,24 @@
     </div>
   </section>
 
-  <section class="modal modal-review">
+  <section id="modal-review" class="modal modal-review">
     <div class="container">
       <div class="review__form">
         <h3 class="review__form-title">Добавить отзыв</h3>
 
-        <form action="" method="" id="feedback-footer" class="review-form">
+        <form action="" method="" id="review-form" class="review-form">
           <p class="review-form__field">
-            <label class="review-form__field-title visually-hidden">
+            <label for="user-data" class="review-form__field-title visually-hidden">
               Введите Ваше имя и фамилию
             </label>
-            <input type="text" name="user" class="review-form__field-input" placeholder="Ваше имя и фамилия" required>
+            <input type="text" name="user-data" id="user-data" class="review-form__field-input" placeholder="Ваше имя и фамилия" required>
           </p>
           <p class="review-form__field">
-            <label class="review-form__field-title visually-hidden">
+            <label for="text" class="review-form__field-title visually-hidden">
               Оставьте свой отзыв или пожелание
             </label>
-            <textarea name="text" class="review-form__field-input" cols="30" rows="10" placeholder="Ваш отзыв или пожелание" required></textarea>
+            <textarea name="text" id="text" class="review-form__field-input" cols="30" rows="10" placeholder="Ваш отзыв или пожелание"
+              required></textarea>
           </p>
           <p class="review-form__field">
             <button type="submit" class="review-form__submit btn">Отправить</button>
@@ -484,15 +486,16 @@
 
   </section>
 
-
   <div class="modal-overlay"></div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
   <script src="slick/slick.min.js"></script>
   <script src="js/slider.js"></script>
-  <script src="js/call.js"></script>
+  <script src="js/feedback.js"></script>
+  <script src="js/sale.js"></script>
+  <script src="js/review.js"></script>
 
 </body>
 

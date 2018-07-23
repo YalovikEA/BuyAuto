@@ -233,7 +233,7 @@ input[type="radio"].visually-hidden {
   flex-direction: column;
   align-items: center;
   margin-bottom: 100px;
-  background: url(../img/general/sale-bg.png) center 78% no-repeat,
+  background: url(../img/general/sale-bg.png) center 230px no-repeat,
   url(../img/general/sale-text-bg.png) center 25% no-repeat;
 }
 
@@ -624,6 +624,7 @@ input[type="radio"].visually-hidden {
 .features__item {
   position: relative;
   width: 370px;
+  min-height: 340px;
   margin-right: 30px;
   margin-bottom: 30px;
   padding: 35px 85px 145px 35px;
@@ -647,24 +648,24 @@ input[type="radio"].visually-hidden {
 .feature::before {
   content: "";
   position: absolute;
-  top: 35px;
+  bottom: -50px;
   left: 30px;
   font-size: 275px;
   font-weight: 800;
   text-transform: uppercase;
-  color: rgb(185, 184, 184, .09);
+  color: rgb(185, 184, 184, .13);
 }
 
 .feature--easy::before {
-  content: "B";
+  content: "У";
 }
 
 .feature--profitably::before {
-  content: "O";
+  content: "В";
 }
 
 .feature--safely::before {
-  content: "Y";
+  content: "О";
 }
 
 .feature::after {
@@ -949,13 +950,10 @@ textarea.review-form__field-input {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 @media (max-width: 992px) {
-  body {
-    padding: 25px;
-  }
 
   .sale {
-    background-size: 75%, 90%;
-    background-position: 50% 200px, 50% 25%;
+    background-size: auto, 90%;
+    background-position: center 230px, center 130px;
   }
 
   .sale__form {
@@ -985,13 +983,6 @@ textarea.review-form__field-input {
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 @media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
 
   .section-title {
     margin-bottom: 75px;
@@ -999,8 +990,8 @@ textarea.review-form__field-input {
 
   .sale {
     margin-bottom: 75px;
-    background-size: 90%, 90%;
-    background-position: 50% 170px, 50% 20%;
+    background-size: 95%, 90%;
+    background-position: center 190px, center 120px;
   }
 
   .sale__title {
@@ -1009,7 +1000,7 @@ textarea.review-form__field-input {
   }
 
   .sale__sub-title {
-    margin-bottom: 200px;
+    margin-bottom: 270px;
     text-align: center;
     font-size: 23px;
   }
@@ -1114,16 +1105,11 @@ textarea.review-form__field-input {
     width: 20px;
   }
 
-
 }
-
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 @media (max-width: 600px) {
-  body {
-    padding: 15px;
-  }
 
   .container {
     padding: 0 15px;
@@ -1137,7 +1123,7 @@ textarea.review-form__field-input {
   .sale {
     margin-bottom: 60px;
     background-size: 90%, 90%;
-    background-position: 50% 35%, 50% 15%;
+    background-position: center 35%, center 15%;
   }
 
   .sale__title {
@@ -1146,7 +1132,7 @@ textarea.review-form__field-input {
   }
 
   .sale__sub-title {
-    margin-bottom: 150px;
+    margin-bottom: 220px;
     text-align: center;
     font-size: 22px;
   }
@@ -1257,7 +1243,8 @@ textarea.review-form__field-input {
 @media (max-width: 480px) {
   
   body {
-    padding: 10px;
+    padding-top: 10px;
+    font-size: 16px;
   }
 
   .container {
@@ -1270,6 +1257,7 @@ textarea.review-form__field-input {
   }
 
   .main-header {
+    position: relative;
     flex-direction: column;
     margin-bottom: 50px;
   }
@@ -1278,8 +1266,15 @@ textarea.review-form__field-input {
     margin-bottom: 15px;
   }
 
+  .logo__img {
+    width: 150px;
+  }
+
   .contacts__link--phone {
-    font-size: 18px;
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    font-size: 14px;
     font-weight: 600;
     margin-bottom: 5px;
   }
@@ -1292,7 +1287,7 @@ textarea.review-form__field-input {
   .sale {
     margin-bottom: 50px;
     background-size: 90%, 90%;
-    background-position: 50% 30%, 50% 15%;
+    background-position: center 30%, center 85px;
   }
 
   .sale__title {

@@ -1,12 +1,57 @@
-$("form").submit(function () {
+$(document).ready(function () {
 
-  var clikedForm = $(this); // Select Form
+  $(".sale-form").submit(
+    function (e) {
+      sendSaleForm('sale-form', 'action_ajax_form.php');
+      return false;
+    }
+  );
 
-  if (clikedForm.find("[name='mobile_no']").val() == '') {
-    alert('Enter Valid mobile number');
-    return false;
+  $(".modal-sale-form").submit(
+    function (e) {
+      sendModalSaleForm('modal-sale', 'action_ajax_form.php');
+      return false;
+    }
+  );
+
+  function sendSaleForm(ajax_form, url) {
+    jQuery.ajax({
+      url: url, //url страницы (action_ajax_form.php)
+      type: "GET", //метод отправки
+      dataType: "html", //формат данных
+      data: jQuery("#" + ajax_form).serialize(),  // Сеарилизуем объект
+      success: function (response) {
+        //Данные отправлены успешно
+
+        //Показываем модалку
+        $('.modal-overlay').css('display', 'block');
+        $('.modal-sale').addClass('modal-show');
+      },
+      error: function (response) {
+        // Данные не отправлены
+        alert('Ошибка. Данные не отправленны.');
+      }
+    });
   }
-  if (clikedForm.find("[name='email_id']").val() == '') {
-    alert('Enter  valid email id');
-    return false;
+
+  function sendModalSaleForm(ajax_form, url) {
+    jQuery.ajax({
+      url: url, //url страницы (action_ajax_form.php)
+      type: "GET", //метод отправки
+      dataType: "html", //формат данных
+      data: jQuery("#" + ajax_form).serialize(),  // Сеарилизуем объект
+      success: function (response) {
+        //Данные отправлены успешно
+
+        //Удаляем модалку
+        $('.modal-overlay').css('display', 'none');
+        $('.modal-sale').removeClass('modal-show');
+      },
+      error: function (response) {
+        // Данные не отправлены
+        alert('Ошибка. Данные не отправленны.');
+      }
+    });
   }
+
+});
