@@ -90,7 +90,7 @@ input[type="radio"].visually-hidden {
   background-color: #f73d31;
   border: none;
   border-radius: 5px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .btn:hover {
