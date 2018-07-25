@@ -34,4 +34,16 @@ $(document).ready(function () {
     });
   }
 
+  $('.modal__close').click(function (e) {
+    $('.modal-overlay').css('display', 'none');
+    $('.modal').removeClass('modal-show');
+  });
+
+  $(this).keydown(function (e) {
+    if (e.which == 27) {
+      $('.modal-overlay').css('display', 'none');
+      $('.modal').removeClass('modal-show');
+    }
+  });
+
 });
