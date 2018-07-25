@@ -29,7 +29,7 @@
         <a href="link" id="header-link" class="contacts__link contacts__link--feedback">Заказать звонок</a>
 
         <div id="header-form" class="contacts__form">
-          <form action="" method="post" id="feedback-header" class="feedback">
+          <form action="./thanks.html" method="" id="feedback-header" class="feedback">
             <p class="feedback__field">
               <label for="header-user" for="header-user" class="feedback__field-title visually-hidden">
                 Введите ваше имя
@@ -367,7 +367,7 @@
           <a href="#" id="footer-link" class="contacts__link contacts__link--feedback">Заказать звонок</a>
 
           <div id="footer-form" class="contacts__form">
-            <form action="" method="" id="feedback-footer" class="feedback">
+            <form action="./thanks.html" method="" id="feedback-footer" class="feedback">
               <p class="feedback__field">
                 <label for="footer-user" class="feedback__field-title visually-hidden">
                   Введите Ваше имя
@@ -390,21 +390,6 @@
     </div>
 
   </footer>
-
-  <section id="modal-feedback" class="modal modal-feedback container">
-    <div class="modal-feedback__line">
-      <div class="main-header__logo logo">
-        <a href="index.html" class="logo__link">
-          <img src="img/content/logo.png" alt="Срочный выкуп авто по всей Республике Беларусь" class="logo__img">
-        </a>
-      </div>
-      <button type="button" class="modal-feedback__close">Закрыть</button>
-    </div>
-    <h2 class="modal-feedback__header">
-      <span>Спасибо!</span>
-      Мы скоро с вами свяжемся
-    </h2>
-  </section>
 
   <section id="modal-sale" class="modal modal-sale container">
     <div class="sale__form">
@@ -447,7 +432,7 @@
         </p>
         <p class="sale-form__field">
           <label for="phone-number" class="sale-form__field-title visually-hidden">
-            Введите Ваш номертелефона
+            Введите Ваш номер телефона
           </label>
           <input type="text" name="phone-number" id="phone-number" class="sale-form__field-input" placeholder="Номер телефона" required>
         </p>
@@ -455,6 +440,8 @@
           <button type="submit" class="sale-form__submit btn">Отправить</button>
         </p>
       </form>
+
+      <button type="button" class="modal__close">Закрыть</button>
     </div>
   </section>
 
@@ -481,6 +468,8 @@
             <button type="submit" class="review-form__submit btn">Отправить</button>
           </p>
         </form>
+
+        <button type="button" class="modal__close">Закрыть</button>
       </div>
     </div>
 
