@@ -42,6 +42,11 @@ body {
   background-color: #ffffff;
 }
 
+body.thanks {
+  margin: 0;
+  padding: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -258,6 +263,7 @@ input[type="radio"].visually-hidden {
   font-weight: 400;
 }
 .sale__form {
+  position: relative;
   max-width: 970px;
   margin: 0 auto;
   padding: 70px;
@@ -653,7 +659,7 @@ input[type="radio"].visually-hidden {
   font-size: 275px;
   font-weight: 800;
   text-transform: uppercase;
-  color: rgb(185, 184, 184, .13);
+  color: rgba(185, 184, 184, .13);
 }
 
 .feature--easy::before {
@@ -782,7 +788,6 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer__contacts .contacts__link--feedback {
-  /* font-size: 18px; */
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -793,17 +798,21 @@ input[type="radio"].visually-hidden {
 }
 
 .main-footer .contacts__form {
-  top: -240px;
+  top: auto;
+  bottom: 60px;
+  left: 100px;
   padding: 30px;
   padding-bottom: 50px;
 }
 
 .main-footer .contacts__form::before {
-  top: 179px;
+  top: auto;
+  bottom: 0px;
 }
 
 .main-footer .contacts__form::after {
-  top: 210px;
+  top: auto;
+  bottom: -10px;
 }
 
 /* MODAL */
@@ -818,72 +827,8 @@ input[type="radio"].visually-hidden {
   z-index: 10;
 }
 
-.modal-feedback {
-  padding: 130px 50px;
-  min-height: 80vh;
-  text-align: center;
-  border-radius: 5px;
-  background: url(../img/general/ornament.png) left 10% repeat-x,
-  url(../img/general/ornament.png) left 90% repeat-x;
-  background-color: #ffffff;
-}
-
-.modal-feedback__line {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 80px;
-}
-
-.modal-feedback__close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 45px;
-  height: 45px;
-  font-size: 0;
-  border: 0;
-  border: 3px solid #f73d31;
-  border-radius: 50%;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.modal-feedback__close::before,
-.modal-feedback__close::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 5px;
-  width: 30px;
-  height: 3px;
-  background-color: #f73d31;
-}
-
-.modal-feedback__close::before {
-  -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-}
-
-.modal-feedback__close::after {
-  -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-}
-
-.modal-feedback__header {
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: 600;
-}
-
-.modal-feedback__header span {
-  display: block;  
-  color: #f73d31;
-}
-
 .review__form {
+  position: relative;
   max-width: 770px;
   margin: 0 auto;
   padding: 60px 100px;
@@ -936,6 +881,43 @@ textarea.review-form__field-input {
   display: block;
 }
 
+.modal__close {
+  position: absolute;
+  top: 35px;
+  right: 10px;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  border: 0;
+  border: 3px solid #f73d31;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.modal__close::before,
+.modal__close::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 5px;
+  width: 30px;
+  height: 3px;
+  background-color: #f73d31;
+}
+
+.modal__close::before {
+  -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+.modal__close::after {
+  -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}
+
 .modal-overlay {
   display: none;  
   position: fixed;
@@ -945,6 +927,72 @@ textarea.review-form__field-input {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* THANKS */
+
+.thanks-wrapper {
+  height: 100vh;
+  padding: 100px 0;
+  background: url(../img/general/ornament.png) left 5% repeat-x,
+  url(../img/general/ornament.png) left 95% repeat-x;
+  background-color: #ffffff;
+}
+
+.thanks__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 170px;
+}
+
+.thanks__content {
+  text-align: center;
+}
+
+.thanks__close {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  font-size: 0;
+  border: 0;
+  border: 3px solid #f73d31;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.thanks__close::before,
+.thanks__close::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  left: 5px;
+  width: 30px;
+  height: 3px;
+  background-color: #f73d31;
+}
+
+.thanks__close::before {
+  -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+}
+
+.thanks__close::after {
+  -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+}
+
+.thanks__content-header {
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.thanks__content-header span {
+  display: block;  
+  color: #f73d31;
 }
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -957,6 +1005,7 @@ textarea.review-form__field-input {
   }
 
   .sale__form {
+    position: relative;
     padding: 30px;
     padding-top: 55px;  
   }
@@ -1090,17 +1139,20 @@ textarea.review-form__field-input {
     background-position: left 5%, left 95%;
   }
 
-  .modal-feedback__close {
+  .thanks__close,
+  .modal__close {
     width: 35px;
     height: 35px;
   }
 
-  .modal-feedback__close::before {
+  .thanks__close::before,
+  .modal__close::before {
     top: 13px;
     width: 20px;
   }
 
-  .modal-feedback__close::after {
+  .thanks__close::after,
+  .modal__close::after {
     top: 13px;
     width: 20px;
   }
@@ -1222,17 +1274,20 @@ textarea.review-form__field-input {
     background-position: left 5%, left 95%;
   }
 
-  .modal-feedback__close {
+  .thanks__close,
+  .modal__close {
     width: 35px;
     height: 35px;
   }
 
-  .modal-feedback__close::before {
+  .thanks__close::before,
+  .modal__close::before {
     top: 13px;
     width: 20px;
   }
 
-  .modal-feedback__close::after {
+  .thanks__close::after,
+  .modal__close::after {
     top: 13px;
     width: 20px;
   }
@@ -1299,6 +1354,10 @@ textarea.review-form__field-input {
     margin-bottom: 150px;
     text-align: center;
     font-size: 21px;
+  }
+
+  .sale__form-title {
+    padding: 0 20px;
   }
 
   .sale__form {
@@ -1427,17 +1486,20 @@ textarea.review-form__field-input {
     background-position: left 5%, left 95%;
   }
 
-  .modal-feedback__close {
+  .thanks__close,
+  .modal__close {
     width: 35px;
     height: 35px;
   }
 
-  .modal-feedback__close::before {
+  .thanks__close::before,
+  .modal__close::before {
     top: 13px;
     width: 20px;
   }
 
-  .modal-feedback__close::after {
+  .thanks__close::after,
+  .modal__close::after {
     top: 13px;
     width: 20px;
   }
