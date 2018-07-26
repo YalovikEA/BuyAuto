@@ -1219,11 +1219,6 @@ textarea.review-form__field-input {
             justify-content: center;
   }
 
-  .modal-feedback {
-    padding: 70px 30px;
-    background-position: left 5%, left 95%;
-  }
-
   .thanks__close {
     width: 35px;
     height: 35px;
@@ -1368,11 +1363,6 @@ textarea.review-form__field-input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-
-  .modal-feedback {
-    padding: 70px 30px;
-    background-position: left 5%, left 95%;
   }
 
   .thanks__close {
@@ -1601,11 +1591,6 @@ textarea.review-form__field-input {
 
   .review__form-title {
     margin-bottom: 20px;
-  }
-
-  .modal-feedback {
-    padding: 70px 30px;
-    background-position: left 5%, left 95%;
   }
 
   .thanks__close {
