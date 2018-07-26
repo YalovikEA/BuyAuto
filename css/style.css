@@ -869,7 +869,6 @@ input[type="radio"].visually-hidden {
 .main-footer .contacts__form {
   top: auto;
   bottom: 60px;
-  left: 100px;
   padding: 30px;
   padding-bottom: 50px;
 }
@@ -968,8 +967,8 @@ textarea.review-form__field-input {
   position: absolute;
   top: 35px;
   right: 10px;
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   font-size: 0;
   border: 0;
   border: 3px solid #f73d31;
@@ -982,9 +981,9 @@ textarea.review-form__field-input {
 .modal__close::after {
   content: "";
   position: absolute;
-  top: 18px;
+  top: 13px;
   left: 5px;
-  width: 30px;
+  width: 20px;
   height: 3px;
   background-color: #f73d31;
 }
@@ -1225,20 +1224,17 @@ textarea.review-form__field-input {
     background-position: left 5%, left 95%;
   }
 
-  .thanks__close,
-  .modal__close {
+  .thanks__close {
     width: 35px;
     height: 35px;
   }
 
-  .thanks__close::before,
-  .modal__close::before {
+  .thanks__close::before {
     top: 13px;
     width: 20px;
   }
 
-  .thanks__close::after,
-  .modal__close::after {
+  .thanks__close::after {
     top: 13px;
     width: 20px;
   }
@@ -1299,6 +1295,14 @@ textarea.review-form__field-input {
     margin-bottom: 60px;
   }
 
+  .bonus__list {
+    margin-right: 0;
+  }
+
+  .bonus__item:nth-child(even) {
+    margin-right: 0;
+  }
+
   .review {  
     margin-bottom: 60px;
   }
@@ -1323,6 +1327,14 @@ textarea.review-form__field-input {
 
   .slider__item {
     width: 100%;
+  }
+
+  .features__list {
+    margin-right: 0;
+  }
+
+  .features__item {
+    margin-right: 0;
   }
 
   .answer {
@@ -1363,20 +1375,17 @@ textarea.review-form__field-input {
     background-position: left 5%, left 95%;
   }
 
-  .thanks__close,
-  .modal__close {
+  .thanks__close {
     width: 35px;
     height: 35px;
   }
 
-  .thanks__close::before,
-  .modal__close::before {
+  .thanks__close::before {
     top: 13px;
     width: 20px;
   }
 
-  .thanks__close::after,
-  .modal__close::after {
+  .thanks__close::after {
     top: 13px;
     width: 20px;
   }
@@ -1599,20 +1608,17 @@ textarea.review-form__field-input {
     background-position: left 5%, left 95%;
   }
 
-  .thanks__close,
-  .modal__close {
+  .thanks__close {
     width: 35px;
     height: 35px;
   }
 
-  .thanks__close::before,
-  .modal__close::before {
+  .thanks__close::before {
     top: 13px;
     width: 20px;
   }
 
-  .thanks__close::after,
-  .modal__close::after {
+  .thanks__close::after {
     top: 13px;
     width: 20px;
   }
