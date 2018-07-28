@@ -4,16 +4,19 @@ $(document).ready(function () {
   $("#header-link").click(function (e) {
     e.preventDefault();
     $('#header-form').toggle();
+    $('.contacts__link--feedback').css({animationPlayState: 'paused',});
   });
 
   $("#footer-link").click(function (e) {
     e.preventDefault();
     $('#footer-form').toggle();
+    $('.contacts__link--feedback').css({animationPlayState: 'paused',});
   });
 
   $(document).on('click', function (e) {
     if (!$(e.target).closest(".call").length) {
       $('.contacts__form').hide();
+      $('.contacts__link--feedback').css({animationPlayState: 'running',});
     }
     e.stopPropagation();
   });

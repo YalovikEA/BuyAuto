@@ -144,6 +144,7 @@ input[type="radio"].visually-hidden {
   border-radius: 5px;
   font-weight: 600;
   text-transform: uppercase;
+  animation: pulse 1s ease-in-out infinite;
 }
 
 .contacts__link--feedback::before {
@@ -156,8 +157,10 @@ input[type="radio"].visually-hidden {
 }
 
 .contacts__link--feedback:hover,
-.contacts__link--feedback:focus {
+.contacts__link--feedback:focus,
+.contacts__link--feedback:visited {
   border-color: #f73d31;
+  animation-play-state: paused;
 }
 
 .contacts__form {
